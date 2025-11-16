@@ -1,0 +1,936 @@
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: white;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    line-height: 1.6;
+    color: #333;
+}
+
+/* Container */
+.container {
+    max-width: 1600px;
+    margin: 0 auto;
+    padding: 40px 30px; /* Slightly more padding for wider layout */
+}
+
+/* Home Hero Section */
+.home-hero {
+    width: 100%;
+    height: 60vh; /* 60% of viewport height - more moderate */
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 20px; /* Add space below the image */
+}
+
+.home-hero-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* Navbar Styles */
+.navbar {
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: relative;
+    z-index: 1000;
+}
+
+.navbar-container {
+    max-width: 1600px;
+    margin: 0 auto;
+    padding: 0 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100px;
+}
+
+.navbar-brand {
+    font-size: 24px;
+    font-weight: bold;
+    color: #2d3748;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+}
+
+.navbar-brand:hover {
+    color: #1a202c;
+}
+
+.navbar-logo {
+    height: 65px;
+    width: auto;
+    object-fit: contain;
+}
+
+.navbar-nav {
+    display: flex;
+    align-items: center;
+    gap: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+.navbar-nav a {
+    color: #000000;
+    text-decoration: none;
+    padding: 16px 20px;
+    border-radius: 6px;
+    font-size: 18px;
+    font-weight: 600;
+    font-family: 'Poppins', sans-serif;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.navbar-nav a:hover,
+.navbar-nav a:active,
+.navbar-nav a.active {
+    color: #2563eb;
+    text-decoration: underline;
+    font-weight: 700;
+}
+
+/* Dropdown Styles */
+.dropdown {
+    position: relative;
+}
+
+.dropdown-toggle {
+    cursor: pointer;
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: white;
+    border: 1px solid #e2e8f0;
+    border-radius: 6px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: none;
+    min-width: 200px;
+    z-index: 1000;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+.dropdown-menu a {
+    display: block;
+    padding: 12px 20px;
+    color: #000000;
+    text-decoration: none;
+    border-radius: 0;
+    font-weight: 600;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+}
+
+.dropdown-menu a:hover {
+    background-color: #f7fafc;
+    color: #2563eb;
+    text-decoration: underline;
+    font-weight: 700;
+}
+
+/* Mobile Menu Button */
+.mobile-menu-btn {
+    display: none;
+    background: white;
+    border: none;
+    padding: 8px;
+    border-radius: 6px;
+    color: #9ca3af;
+    cursor: pointer;
+}
+
+.mobile-menu-btn:hover {
+    color: #6b7280;
+    background-color: #f9fafb;
+}
+
+/* Main Content */
+.main-content {
+    flex: 1;
+    background-color: white;
+    padding: 15px 0; /* Add some padding for spacing */
+}
+
+.page-title {
+    font-size: 36px;
+    font-weight: bold;
+    color: #2d3748;
+    margin-bottom: 16px;
+    text-align: center;
+}
+
+.page-subtitle {
+    font-size: 18px;
+    color: #4a5568;
+    margin-bottom: 32px;
+    text-align: center;
+}
+
+/* Card Grid */
+.card-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 24px;
+    max-width: 1400px;
+    margin: 48px auto 0;
+}
+
+.card {
+    background-color: #f7fafc;
+    padding: 24px;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.card-title {
+    font-size: 20px;
+    font-weight: 600;
+    color: #2d3748;
+    margin-bottom: 12px;
+}
+
+.card-text {
+    color: #4a5568;
+}
+
+/* Footer */
+.footer {
+    background-color: #19154e;
+    color: white;
+    padding: 32px 0;
+    margin-top: auto;
+}
+
+.footer-container {
+    max-width: 1600px;
+    margin: 0 auto;
+    padding: 0 30px;
+    text-align: center;
+}
+
+.footer-text {
+    font-size: 14px;
+}
+
+/* Responsive Design */
+@media (min-width: 768px) {
+    .card-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .mobile-menu-btn {
+        display: none !important;
+    }
+}
+
+@media (max-width: 767px) {
+    .navbar-nav {
+        display: none;
+    }
+
+    .mobile-menu-btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .page-title {
+        font-size: 28px;
+    }
+
+    .container {
+        padding: 0 16px;
+    }
+}
+
+/* Utility Classes */
+.text-center {
+    text-align: center;
+}
+
+.hidden {
+    display: none;
+}
+
+/* SVG Icon */
+.menu-icon {
+    width: 24px;
+    height: 24px;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+/* Major/Category Page Styles */
+.major-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.major-title {
+    font-size: 36px;
+    font-weight: bold;
+    color: #2d3748;
+    margin-bottom: 16px;
+}
+
+.major-description {
+    font-size: 18px;
+    color: #4a5568;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.courses-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.course-card {
+    display: flex;
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+.course-image {
+    flex-shrink: 0;
+    width: 350px;
+}
+
+.course-img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.course-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.course-title {
+    font-size: 24px;
+    font-weight: 600;
+    color: #2d3748;
+    margin-bottom: 8px;
+}
+
+.course-meta {
+    font-size: 14px;
+    color: #718096;
+    margin-bottom: 12px;
+}
+
+.course-description {
+    font-size: 16px;
+    color: #4a5568;
+    line-height: 1.6;
+    margin-bottom: 16px;
+    flex-grow: 1;
+}
+
+.read-more-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #19154e;
+    color: white;
+    text-decoration: none;
+    border-radius: 25px;
+    font-size: 14px;
+    font-weight: 500;
+    transition: background-color 0.3s ease;
+    align-self: flex-end;
+    margin-top: auto;
+}
+
+.read-more-btn:hover {
+    background-color: #2d1b69;
+}
+
+/* Course Detail Page Styles */
+.course-detail-header {
+    display: flex;
+    gap: 30px;
+    margin-bottom: 40px;
+    align-items: flex-start;
+}
+
+.course-detail-img {
+    width: 300px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 12px;
+    flex-shrink: 0;
+}
+
+.course-detail-info {
+    flex: 1;
+}
+
+.course-detail-title {
+    font-size: 36px;
+    font-weight: bold;
+    color: #2d3748;
+    margin-bottom: 12px;
+}
+
+.course-detail-meta {
+    font-size: 16px;
+    color: #718096;
+    margin-bottom: 20px;
+}
+
+.course-detail-content {
+    margin-bottom: 40px;
+}
+
+.course-full-description {
+    font-size: 18px;
+    line-height: 1.8;
+    color: #4a5568;
+}
+
+.course-actions {
+    text-align: left;
+}
+
+.back-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #e2e8f0;
+    color: #4a5568;
+    text-decoration: none;
+    border-radius: 6px;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.back-btn:hover {
+    background-color: #cbd5e0;
+}
+
+/* Responsive Design for Category Pages */
+@media (max-width: 768px) {
+    .course-card {
+        flex-direction: column;
+    }
+
+    .course-image {
+        width: 100%;
+    }
+
+    .course-detail-header {
+        flex-direction: column;
+    }
+
+    .course-detail-img {
+        width: 100%;
+        height: 200px;
+    }
+
+    .major-title {
+        font-size: 28px;
+    }
+
+    .course-detail-title {
+        font-size: 28px;
+    }
+
+    .home-card {
+        flex-direction: column;
+    }
+
+    .home-card-image {
+        width: 100%;
+    }
+}
+
+/* Home Page Cards */
+.home-cards-section {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.home-card {
+    display: flex;
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+.home-card-image {
+    flex-shrink: 0;
+    width: 350px;
+}
+
+.home-card-img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.home-card-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.home-card-title {
+    font-size: 24px;
+    font-weight: 600;
+    color: #2d3748;
+    margin-bottom: 8px;
+}
+
+.home-card-text {
+    font-size: 16px;
+    color: #4a5568;
+    line-height: 1.6;
+    margin-bottom: 16px;
+    flex-grow: 1;
+}
+
+.home-card-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #19154e;
+    color: white;
+    text-decoration: none;
+    border-radius: 25px;
+    font-size: 14px;
+    font-weight: 500;
+    transition: background-color 0.3s ease;
+    align-self: flex-end;
+    margin-top: auto;
+}
+
+.home-card-btn:hover {
+    background-color: #2d1b69;
+}
+
+/* Course Detail Page - Full Screen Layout */
+.course-detail-page {
+    margin-top: -100px; /* Offset navbar height to make image truly full screen */
+    padding-top: 100px; /* Add padding back for title section */
+}
+
+.course-title-section {
+    background-color: white;
+    padding: 20px 0;
+    position: relative;
+    z-index: 10;
+}
+
+.course-page-title {
+    font-size: 32px;
+    font-weight: 700;
+    color: #2d3748;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+.course-fullscreen-image {
+    width: 100%;
+    max-width: 1400px;
+    margin: 40px auto;
+    padding: 0 30px;
+    display: flex;
+    justify-content: center;
+}
+
+.course-fullscreen-img {
+    width: 100%;
+    height: 600px;
+    object-fit: contain;
+    object-position: center;
+    border-radius: 20px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+    background-color: #f8f9fa;
+}
+
+.course-info-section {
+    padding: 40px 0;
+}
+
+.course-meta-info {
+    font-size: 16px;
+    color: #4a5568;
+    margin-bottom: 24px;
+    font-weight: 500;
+    font-family: 'Poppins', sans-serif;
+}
+
+.course-description-section {
+    margin-bottom: 32px;
+}
+
+.course-full-description {
+    font-size: 18px;
+    line-height: 1.8;
+    color: #2d3748;
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+}
+
+.course-actions {
+    padding-top: 20px;
+    border-top: 1px solid #e2e8f0;
+}
+
+/* Responsive adjustments for course detail page */
+@media (max-width: 768px) {
+    .course-page-title {
+        font-size: 24px;
+    }
+
+    .course-fullscreen-image {
+        max-width: 100%;
+        margin: 20px auto;
+        padding: 0 20px;
+    }
+
+    .course-fullscreen-img {
+        height: 400px;
+        border-radius: 15px;
+        object-fit: contain;
+    }
+
+    .course-detail-page {
+        margin-top: -100px;
+        padding-top: 100px;
+    }
+}
+
+/* Writers Page Styles */
+.writers-section {
+    padding: 40px 0;
+}
+
+.writers-page-title {
+    font-size: 36px;
+    font-weight: 700;
+    color: #2d3748;
+    text-align: center;
+    margin-bottom: 50px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.writers-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.writer-card {
+    text-align: center;
+}
+
+.writer-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.writer-link:hover {
+    transform: translateY(-5px);
+}
+
+.writer-image-container {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 0 auto 20px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+    background-color: white;
+    padding: 10px;
+}
+
+.writer-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.writer-name {
+    font-size: 20px;
+    font-weight: 700;
+    color: #2d3748;
+    margin-bottom: 8px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.writer-specialty {
+    font-size: 16px;
+    color: #4a5568;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Writer Detail Page Styles */
+.writer-detail-header {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    margin-bottom: 50px;
+    padding: 40px 0;
+}
+
+.writer-header-image-container {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    overflow: hidden;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+    background-color: white;
+    padding: 8px;
+    flex-shrink: 0;
+}
+
+.writer-header-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.writer-header-info {
+    flex: 1;
+}
+
+.writer-header-name {
+    font-size: 32px;
+    font-weight: 700;
+    color: #2d3748;
+    margin-bottom: 8px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.writer-header-specialty {
+    font-size: 18px;
+    color: #4a5568;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+.writer-courses-section {
+    margin-bottom: 40px;
+}
+
+.writer-courses-title {
+    font-size: 24px;
+    font-weight: 600;
+    color: #2d3748;
+    margin-bottom: 30px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.courses-list {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.no-courses {
+    text-align: center;
+    padding: 40px;
+    color: #4a5568;
+    font-style: italic;
+}
+
+/* Responsive design for writers */
+@media (max-width: 768px) {
+    .writers-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .writer-detail-header {
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+    }
+
+    .writer-image-container {
+        width: 150px;
+        height: 150px;
+    }
+
+    .writer-header-name {
+        font-size: 24px;
+    }
+}
+
+/* Popular Page Styles */
+.popular-header {
+    padding: 40px 0 30px;
+}
+
+.popular-title {
+    font-size: 36px;
+    font-weight: 700;
+    color: #2d3748;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Pagination Styles */
+.pagination-container {
+    margin: 50px 0 40px;
+    display: flex;
+    justify-content: center;
+}
+
+.pagination {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.pagination-label {
+    font-size: 16px;
+    font-weight: 500;
+    color: #2d3748;
+}
+
+.pagination-number {
+    display: inline-block;
+    padding: 8px 12px;
+    font-size: 16px;
+    font-weight: 500;
+    color: #4a5568;
+    text-decoration: none;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+    min-width: 40px;
+    text-align: center;
+}
+
+.pagination-number:hover {
+    background-color: #f7fafc;
+    color: #2d3748;
+}
+
+.pagination-number.active {
+    font-weight: 700;
+    color: #19154e;
+    background-color: #e2e8f0;
+}
+
+.pagination-number.active:hover {
+    background-color: #e2e8f0;
+    color: #19154e;
+}
+
+/* Responsive pagination */
+@media (max-width: 768px) {
+    .pagination {
+        gap: 10px;
+    }
+
+    .pagination-number {
+        padding: 6px 10px;
+        font-size: 14px;
+        min-width: 35px;
+    }
+}
+
+/* About Page Styles */
+.about-page {
+    min-height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 60px 0;
+}
+
+.about-content {
+    max-width: 800px;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.about-title {
+    font-size: 42px;
+    font-weight: 700;
+    color: #2d3748;
+    margin-bottom: 40px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.about-text {
+    font-family: 'Poppins', sans-serif;
+}
+
+.about-text p {
+    font-size: 18px;
+    line-height: 1.8;
+    color: #4a5568;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.about-text p:last-child {
+    margin-bottom: 0;
+}
+
+/* Responsive design for about page */
+@media (max-width: 768px) {
+    .about-page {
+        padding: 40px 0;
+        min-height: 50vh;
+    }
+
+    .about-title {
+        font-size: 32px;
+        margin-bottom: 30px;
+    }
+
+    .about-text p {
+        font-size: 16px;
+        text-align: center;
+    }
+
+    .about-content {
+        padding: 0 20px;
+    }
+}
