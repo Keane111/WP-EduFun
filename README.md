@@ -2,7 +2,30 @@
 
 EduFun adalah platform pembelajaran berbasis web yang menyediakan konten edukasi IT secara gratis untuk mahasiswa dan pelajar Indonesia. Website ini dikembangkan menggunakan Laravel 11 dengan desain responsif dan user-friendly.
 
-## 🚀 Features
+## � Screenshots
+
+### 🏠 Home Page
+<img src="public/images/screenshots/Home.png" alt="EduFun Home Page" width="800">
+
+### 📚 Interactive Multimedia Category
+<img src="public/images/screenshots/Interactive-Multimedia.png" alt="Interactive Multimedia Courses" width="800">
+
+### 💻 Software Engineering Category  
+<img src="public/images/screenshots/Software_Engineer.png" alt="Software Engineering Courses" width="800">
+
+### ✍️ Writers Page
+<img src="public/images/screenshots/Writers.png" alt="Writers Profile Page" width="800">
+
+### 👤 Writer Detail Page
+<img src="public/images/screenshots/Writers-detail.png" alt="Writer Detail Page" width="800">
+
+### ⭐ Popular Courses
+<img src="public/images/screenshots/Popular.png" alt="Popular Courses Page" width="800">
+
+### ℹ️ About Us
+<img src="public/images/screenshots/About.png" alt="About Us Page" width="800">
+
+## �🚀 Features
 
 - **Course Management**: Manajemen kursus Interactive Multimedia dan Software Engineering
 - **Writer Profiles**: Profil lengkap para instruktur dan penulis
