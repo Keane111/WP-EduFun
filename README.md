@@ -79,33 +79,6 @@ php artisan serve
 - **Styling**: `public/css/app.css`
 - **Routes**: `routes/web.php`
 
-## 🎯 Course Categories
-
-### Interactive Multimedia
-- Human and Computer Interaction (HCI)
-- User Experience (UX)
-- UX for Digital Immersive Technology
-
-### Software Engineering
-- Pattern Software Design
-- Agile Software Development
-- Code Reengineering
-
-## 👥 Writers
-
-- **Raka Putra Wicaksono** - Specialist Interactive Multimedia
-- **Bia Mecca Annica** - Specialist Software Engineering
-- **Abi Firmansyah** - Specialist Network Security
-
-## 🌟 About Laravel
-
-This project is built with Laravel - a web application framework with expressive, elegant syntax. Laravel takes the pain out of development by easing common tasks used in many web projects.
-
-## 📄 License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
-
----
 
 **Developed by**: Keane Richard Christopher | 2702307404  
 **Course**: Web Programming | BINUS University
